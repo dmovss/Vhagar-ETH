@@ -13,7 +13,7 @@
 <body>
     <!-- Loading Animation -->
     <div id="loading" class="loading">
-        <div class="spinner"></div>
+        <div class="bubble"></div>
     </div>
 
     <!-- Name Input Modal -->
@@ -47,6 +47,18 @@
                 <div id="progress" class="progress-fill"></div>
             </div>
             <p class="farmed-tokens" id="farmed-text">Farmed: <span id="farmed-count">0</span> #VHG</p>
+            <div class="bonus-section">
+                <button id="bonus-btn" class="bonus-btn">Claim Daily Bonus</button>
+                <p id="bonus-timer">Next bonus: --:--:--</p>
+            </div>
+            <div class="multiplier-section">
+                <label for="multiplier-toggle" id="multiplier-label">Double Tap Rate</label>
+                <input type="checkbox" id="multiplier-toggle">
+            </div>
+            <div class="stats-section">
+                <p>Total Taps: <span id="total-taps">0</span></p>
+                <p>Streak: <span id="streak">0</span> days</p>
+            </div>
         </div>
     </div>
 
