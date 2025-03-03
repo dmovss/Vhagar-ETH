@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vhagar Farming App</title>
+    <!-- Gilroy Font (Placeholder - Replace with actual CDN or local source) -->
+    <link href="path/to/gilroy-font.css" rel="stylesheet">
+    <!-- Space Grotesk for headings/buttons, Inter as fallback -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Loading Animation -->
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+    </div>
+
     <!-- Name Input Modal -->
-    <div id="name-modal" class="modal">
+    <div id="name-modal" class="modal" style="display: none;">
         <div class="modal-content">
             <h2 id="modal-title">Enter Your Name</h2>
             <form id="name-form">
@@ -25,8 +33,8 @@
     <!-- Main App Container -->
     <div class="app-container" id="app-container" style="display: none;">
         <div class="language-switcher">
-            <button class="lang-btn" data-lang="en">🇬🇧 ENG</button>
-            <button class="lang-btn" data-lang="ru">🇷🇺 РУС</button>
+            <button class="lang-btn active" data-lang="en">ENG</button>
+            <button class="lang-btn" data-lang="ru">РУС</button>
         </div>
         <h1 id="greeting">Hello, Guest!</h1>
         <p id="welcome-text">Farm #VHG Tokens by Cracking!</p>

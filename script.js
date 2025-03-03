@@ -22,6 +22,7 @@ const translations = {
 
 // Initialize the app
 document.addEventListener('DOMContentLoaded', () => {
+    const loading = document.getElementById('loading');
     const nameModal = document.getElementById('name-modal');
     const nameForm = document.getElementById('name-form');
     const userNameInput = document.getElementById('user-name');
@@ -42,6 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let farmedTokens = 0;
     let currentLang = 'en';
 
+    // Show loading animation for 1.5 seconds, then modal
+    setTimeout(() => {
+        loading.style.display = 'none';
+        nameModal.style.display = 'flex';
+    }, 1500);
+
     // Function to update language
     function updateLanguage(lang) {
         currentLang = lang;
@@ -58,8 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Show name modal on load with default language
-    nameModal.style.display = 'flex';
+    // Update language on load
     updateLanguage('en');
 
     // Handle name form submission
@@ -90,8 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
         counterDisplay.textContent = taps;
 
         // Trigger cracking animation
-        tokenCircle.classList.remove('crack');
-        void tokenCircle.offsetWidth; // Reset animation
+        tokenCircle.classList.remove('crack', 'glow');
+        void tokenCircle.offsetWidth; // Reset animations
         tokenCircle.classList.add('crack');
 
         // Update progress bar (0-100% over 10 taps)
@@ -105,11 +111,12 @@ document.addEventListener('DOMContentLoaded', () => {
             farmedText.textContent = `${translations[currentLang].farmedText} ${farmedTokens} #VHG`;
             progressBar.style.width = '0%'; // Reset progress after farming a token
 
-            // Show notification
+            // Show notification and trigger glow animation
             notification.classList.add('show');
+            tokenCircle.classList.add('glow');
             setTimeout(() => {
                 notification.classList.remove('show');
-            }, 2000); // Hide after 2 seconds
+            }, 2000); // Hide notification after 2 seconds
         }
     });
 });
