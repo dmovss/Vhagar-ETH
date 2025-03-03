@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vhagar Farming App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Name Input Modal -->
+    <div id="name-modal" class="modal">
+        <div class="modal-content">
+            <h2>Enter Your Name</h2>
+            <form id="name-form">
+                <input type="text" id="user-name" placeholder="Your Name" required>
+                <button type="submit" class="modal-btn">Start Farming</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main App Container -->
+    <div class="app-container" id="app-container" style="display: none;">
+        <h1 id="greeting">Hello, Guest!</h1>
+        <p>Farm #VHG Tokens by Cracking!</p>
+        <div class="farming-section">
+            <div class="token-circle" id="token-circle">
+                <span id="counter">0</span>
+            </div>
+            <button id="farm-btn">Crack to Farm</button>
+            <div class="progress-bar">
+                <div id="progress" class="progress-fill"></div>
+            </div>
+            <p class="farmed-tokens">Farmed: <span id="farmed-count">0</span> #VHG</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Developed and designed by DMOVSS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
