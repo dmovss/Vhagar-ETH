@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vhagar Farming App</title>
+    <!-- Aquire Font (Placeholder - Replace with actual CDN or local source) -->
+    <link href="path/to/aquire-font.css" rel="stylesheet">
     <!-- Gilroy Font (Placeholder - Replace with actual CDN or local source) -->
     <link href="path/to/gilroy-font.css" rel="stylesheet">
     <!-- Space Grotesk for headings/buttons, Inter as fallback -->
@@ -32,9 +34,15 @@
 
     <!-- Main App Container -->
     <div class="app-container" id="app-container" style="display: none;">
-        <div class="language-switcher">
-            <button class="lang-btn active" data-lang="en">ENG</button>
-            <button class="lang-btn" data-lang="ru">РУС</button>
+        <div class="header">
+            <div class="logo">
+                <span class="logo-main">Vhagar</span>
+                <span class="logo-sub">Powered by Ethereum Designed by Dmovss</span>
+            </div>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en">ENG</button>
+                <button class="lang-btn" data-lang="ru">РУС</button>
+            </div>
         </div>
         <h1 id="greeting">Hello, Guest!</h1>
         <p id="welcome-text">Farm #VHG Tokens by Cracking!</p>
@@ -61,11 +69,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p id="footer-text">Developed and designed by DMOVSS</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>

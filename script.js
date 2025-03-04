@@ -7,7 +7,6 @@ const translations = {
         farmBtn: "Crack to Farm",
         farmedText: "Farmed: ",
         notification: "Your #VHG has been sent to the cloud",
-        footerText: "Developed and designed by DMOVSS",
         bonusBtn: "Claim Daily Bonus",
         bonusTimer: "Next bonus: ",
         multiplierLabel: "Double Tap Rate",
@@ -21,7 +20,6 @@ const translations = {
         farmBtn: "Разбить для фарминга",
         farmedText: "Собрано: ",
         notification: "Ваш #VHG отправлен в облако",
-        footerText: "Разработано и спроектировано DMOVSS",
         bonusBtn: "Получить дневной бонус",
         bonusTimer: "Следующий бонус: ",
         multiplierLabel: "Удвоить скорость тапов",
@@ -48,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const startBtn = document.getElementById('start-btn');
     const welcomeText = document.getElementById('welcome-text');
     const farmedText = document.getElementById('farmed-text');
-    const footerText = document.getElementById('footer-text');
     const bonusBtn = document.getElementById('bonus-btn');
     const bonusTimer = document.getElementById('bonus-timer');
     const multiplierToggle = document.getElementById('multiplier-toggle');
@@ -71,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
         farmBtn.textContent = translations[lang].farmBtn;
         farmedText.textContent = `${translations[lang].farmedText} ${farmedTokens} #VHG`;
         notification.textContent = translations[lang].notification;
-        footerText.textContent = translations[lang].footerText;
         bonusBtn.textContent = translations[lang].bonusBtn;
         bonusTimer.textContent = `${translations[lang].bonusTimer} ${getNextBonusTime()}`;
         multiplierLabel.textContent = translations[lang].multiplierLabel;
